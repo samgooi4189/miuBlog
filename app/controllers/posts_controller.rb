@@ -1,5 +1,10 @@
 class PostsController < ApplicationController
 
+	def new
+		#to prevent nil in new.html
+		@post = Post.new
+	end
+
 	def create
 		#render text: params[:post].inspect
 		@post = Post.new(post_params)
