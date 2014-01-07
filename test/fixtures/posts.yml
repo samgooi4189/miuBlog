@@ -7,3 +7,10 @@ one:
 two:
   title: MyString
   text: MyText
+
+<% 1000.times do |n| %>
+user_<%= n %>:
+  title: <%= "title#{n}" %>
+  text: <%= "title#{n}_contains_text#{n}"%>
+<% end %>
+
